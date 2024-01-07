@@ -1,8 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+
 ---
 
+<script>
+  function handleClick () {
+    console.log("button clicked!");
+  }
+  document.getElementById("button").addEventListener("click", handleClick);
+</script>
 <Layout title="Welcome to Astro.">
 	<main>
 		<svg
@@ -40,6 +47,7 @@ import Card from '../components/Card.astro';
 		</p>
 		<a href="/blog">blog</a>
 		<a href="/about">about</a>
+	<button id="button">Click Me</button>
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"
